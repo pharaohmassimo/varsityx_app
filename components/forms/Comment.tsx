@@ -73,7 +73,7 @@ const Comment = ({ threadId, currentUserImg, currentUserId }: Props) => {
                               src={currentUserImg}
                               alt="Current User"
                               width={48}
-                            height={48}
+                              height={48}
                               className="rounded-full object-cover"
                             />
                           )}
