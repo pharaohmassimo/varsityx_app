@@ -1,27 +1,65 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
+    "target": "ES2017", 
+    // This sets the JavaScript version that TypeScript compiles down to. 
+    // ES2017 is a modern version with async/await support.
+
+    "lib": ["dom", "dom.iterable", "esnext"], 
+    // Specifies which default TypeScript libraries to include.
+    // "dom" & "dom.iterable" allow working with the browser DOM.
+    // "esnext" enables the latest JavaScript features.
+
+    "allowJs": true, 
+    // Allows JavaScript files to be included in the project.
+
+    "skipLibCheck": true, 
+    // Skips checking types inside node_modules, speeding up builds.
+
+    "strict": true, 
+    // Enables strict type-checking for better TypeScript safety.
+
+    "noEmit": true, 
+    // Prevents TypeScript from generating compiled `.js` files. 
+    // Since you're using Next.js, the framework handles compilation.
+
+    "esModuleInterop": true, 
+    // Improves compatibility with JavaScript modules (like `require()` and `import`).
+
+    "module": "esnext", 
+    // Uses ESNext module resolution, allowing modern import/export syntax.
+
+    "moduleResolution": "bundler", 
+    // Optimizes module resolution for bundlers like Webpack (used by Next.js).
+
+    "resolveJsonModule": true, 
+    // Allows importing JSON files as modules.
+
+    "isolatedModules": true, 
+    // Ensures each file is compiled in isolation. Required by Next.js.
+
+    "jsx": "preserve", 
+    // Keeps JSX syntax unchanged during compilation.
+    // Next.js will handle JSX conversion.
+
+    "incremental": true, 
+    // Enables incremental compilation for faster builds.
+
     "plugins": [
       {
         "name": "next"
       }
-    ],
+    ], 
+    // Adds Next.js-specific TypeScript support.
+
     "paths": {
       "@/*": ["./*"]
     }
+    // Enables shorthand imports using `@/` instead of long relative paths.
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"], 
+  // Specifies which files to include in the project.
+
+  "exclude": ["node_modules"] 
+  // Excludes node_modules to speed up compilation.
 }

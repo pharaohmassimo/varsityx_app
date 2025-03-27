@@ -160,11 +160,6 @@
   @apply rounded-3xl bg-primary-500 px-8 py-2 !text-small-regular text-light-1 max-xs:w-full !important;
 }
 
-/* globals.css */
-.comment-spacing > * + * {
-  margin-top: 2rem; /* Adjust value as needed */
-}
-
 
 @layer base {
   :root {
