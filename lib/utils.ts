@@ -27,8 +27,8 @@ export function formatDateString(dateString: string) {
   const time = date.toLocaleTimeString([], {
     hour: "numeric",
     minute: "2-digit",
-    timeZoneName: "short",  // This ensures that the time zone is shown in the formatted string
-  });
+    timeZone: "Africa/Harare",  // Replace with the desired time zone if needed
+  });  
 
   return `${time} - ${formattedDate}`;
 }
