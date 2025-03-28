@@ -12,7 +12,6 @@ export function isBase64Image(imageData: string) {
   return base64Regex.test(imageData);
 }
 
-// created by chatgpt
 export function formatDateString(dateString: string) {
   const options: Intl.DateTimeFormatOptions = {
     year: "numeric",
@@ -21,15 +20,19 @@ export function formatDateString(dateString: string) {
   };
 
   const date = new Date(dateString);
+
+  // Get the user's local time zone and format the date accordingly
   const formattedDate = date.toLocaleDateString(undefined, options);
 
   const time = date.toLocaleTimeString([], {
     hour: "numeric",
     minute: "2-digit",
+    timeZoneName: "short",  // This ensures that the time zone is shown in the formatted string
   });
 
   return `${time} - ${formattedDate}`;
 }
+
 
 // created by chatgpt
 export function formatThreadCount(count: number): string {
