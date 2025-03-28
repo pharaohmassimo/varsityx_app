@@ -173,6 +173,7 @@ module.exports = {
   	},
   	extend: {
   		colors: {
+			 customBlue: '#1e40af',  // Define your custom color
   			'primary-500': '#877EFF',
   			'secondary-500': '#FFB620',
   			blue: '#0095F6',

@@ -33,14 +33,35 @@ export function formatDateString(dateString: string) {
   return `${time} - ${formattedDate}`;
 }
 
-// to Detect and Convert URLs to Links:
+// to Detect and Convert URLs to Links: and sanitize
 
 export function convertLinksToClickable(text: string) {
   const urlRegex = /(https?:\/\/[^\s]+)/g; // Regular expression to match URLs
-  return text.replace(urlRegex, (url) => `<a href="${url}" target="_blank" class="text-blue-500 hover:underline">${url}</a>`);
+  
+  return text.replace(urlRegex, (url) => {
+    // Sanitize URL by removing fragments (#) and query parameters (?)
+    const sanitizedUrl = sanitizeUrl(url);
+    return `<a href="${sanitizedUrl}" target="_blank" class="text-gray-1 hover:underline">${sanitizedUrl}</a>`;
+  });
 }
 
+function sanitizeUrl(url: string): string {
+  try {
+    // Create a new URL object for better parsing
+    const parsedUrl = new URL(url);
 
+    // Remove query parameters and fragments (if not needed)
+    parsedUrl.search = '';  // Removes query string
+    parsedUrl.hash = '';    // Removes fragment identifier
+
+    // Rebuild the URL with the sanitized parts
+    return parsedUrl.toString();
+  } catch (error) {
+    // If the URL is invalid, return the original string
+    console.error('Invalid URL:', url);
+    return url;
+  }
+}
 
 
 // created by chatgpt
