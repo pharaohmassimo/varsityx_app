@@ -22,7 +22,7 @@ interface Props {
         author: {
             image: string;
         };
-    }[];
+    }[]; // Array of comments with an author image for now
     isComment?: boolean;
 }
 
@@ -76,9 +76,10 @@ const ThreadCard = ({
                                 {formatDateString(createdAt)}
                             </p>
 
-                            {isComment && comments.length > 0 && (
-                                <Link href={`/thread/${id}`}>
-                                    <p className="mt-1 text-subtle-medium text-gray-1">{comments.length}</p>
+                            {/* Display the number of comments dynamically */}
+                            {comments.length > 0 && (
+                                <Link href={`/thread/${id}`} className="mt-1 text-subtle-medium text-gray-1">
+                                    {comments.length} {comments.length === 1 ? 'Comment' : 'Comments'}
                                 </Link>
                             )}
 

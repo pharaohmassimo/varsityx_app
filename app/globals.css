@@ -227,3 +227,28 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom styles for Clerk signup form */
+.clerk-signup-form {
+  background-color: #121417;
+  color: #ffffff;
+}
+
+.clerk-signup-form input {
+  background-color: #1F1F22;
+  color: #ffffff;
+  border: 1px solid #4A4A4A;
+}
+
+.clerk-signup-form button {
+  background-color: #0095F6;
+  color: white;
+}
+
+.clerk-signup-form button:hover {
+  background-color: #006BB3;
+}
+
+.clerk-signup-form label {
+  color: #ffffff;
+}

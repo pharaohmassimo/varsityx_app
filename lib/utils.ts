@@ -41,7 +41,7 @@ export function convertLinksToClickable(text: string) {
   return text.replace(urlRegex, (url) => {
     // Sanitize URL by removing fragments (#) and query parameters (?)
     const sanitizedUrl = sanitizeUrl(url);
-    return `<a href="${sanitizedUrl}" target="_blank" class="text-gray-1 hover:underline">${sanitizedUrl}</a>`;
+    return `<a href="${sanitizedUrl}" target="_blank" class="text-gray-1 hover:text-light-1 hover:underline">${sanitizedUrl}</a>`;
   });
 }
 
