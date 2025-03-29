@@ -7,6 +7,7 @@ interface Props {
   id: string;
   currentUserId: string;
   parentId: string | null;
+  username: string;
   content: string;
   author: { name: string; image: string; id: string };
   community: { id: string; name: string; image: string } | null;
@@ -19,12 +20,14 @@ const ThreadCard = ({
   id,
   currentUserId,
   parentId,
+  username,
   content,
   author,
   community,
   createdAt,
   comments,
-  isComment
+  isComment,
+ 
 }: Props) => {
   // Extract URL before modifying content
   const urlRegex = /(https?:\/\/[^\s]+)/g;
@@ -53,9 +56,12 @@ const ThreadCard = ({
             <div className="thread-card_bar" />
           </div>
           <div className="flex w-full flex-col">
-            <Link href={`/profile/${author.id}`} className="w-fit">
-              <h4 className="cursor-pointer text-base-semi-bold text-light-1">{author.name}</h4>
-            </Link>
+                    <Link href={`/profile/${author.id}`} className="w-fit">
+                        <h4 className="cursor-pointer text-base-semi-bold text-light-1">{author.name}</h4>
+                        {/* Check if username exists */}
+                        {username && <p className="text-small-medium text-gray-1"> @{username}</p>}
+                    </Link>
+
             
             {/* Safe content rendering */}
             <p 
