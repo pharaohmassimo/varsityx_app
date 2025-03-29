@@ -24,8 +24,8 @@ function LeftSidebar() {
                     <Link
                         href={link.route}
                         key={link.label}
-                        className={`leftsidebar_link ${isActive && 'bg-primary-500'} group flex items-center gap-3 p-3 rounded-md transition-transform duration-100 ease-out 
-                            hover:-translate-y-1 hover:bg-primary-500 
+                        className={`leftsidebar_link ${isActive && 'bg-primary-900'} group flex items-center gap-3 p-3 rounded-md transition-transform duration-100 ease-out 
+                            hover:-translate-y-1 hover:bg-primary-900 
                             active:scale-95 active:translate-y-0 
                             transform origin-center select-none`}
                     >

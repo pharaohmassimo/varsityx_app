@@ -175,6 +175,7 @@ module.exports = {
   		colors: {
 			 customBlue: '#1e40af',  // Define your custom color
   			'primary-500': '#877EFF',
+			'primary-900' : "#697C89",
   			'secondary-500': '#FFB620',
   			 blue: '#0095F6',
   			'logout-btn': '#FF5A5A',

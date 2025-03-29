@@ -157,7 +157,7 @@ export async function getActivity(userId: string) {
   try {
     connectToDB();
 
-    // Find all threads created by the user 
+    // Find all threads created by the user
     const userThreads = await Thread.find({ author: userId });
 
     // Collect all the child thread ids (replies) from the 'children' field of each user thread

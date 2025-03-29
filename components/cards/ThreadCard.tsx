@@ -7,7 +7,6 @@ interface Props {
   id: string;
   currentUserId: string;
   parentId: string | null;
-  username: string;
   content: string;
   author: { name: string; image: string; id: string };
   community: { id: string; name: string; image: string } | null;
@@ -20,7 +19,6 @@ const ThreadCard = ({
   id,
   currentUserId,
   parentId,
-  username,
   content,
   author,
   community,
@@ -59,7 +57,7 @@ const ThreadCard = ({
                     <Link href={`/profile/${author.id}`} className="w-fit">
                         <h4 className="cursor-pointer text-base-semi-bold text-light-1">{author.name}</h4>
                         {/* Check if username exists */}
-                        {username && <p className="text-small-medium text-gray-1"> @{username}</p>}
+                        
                     </Link>
 
             
@@ -93,7 +91,8 @@ const ThreadCard = ({
       {!isComment && community && (
         <Link href={`/communities/${community.id}`} className="mt-5 flex items-center">
           <p className="text-subtle-medium text-gray-1">
-            {formatDateString(createdAt)} - {community.name} Community
+            {formatDateString(createdAt)} 
+            - {community.name} Community
           </p>
           <Image 
             src={community.image} 
