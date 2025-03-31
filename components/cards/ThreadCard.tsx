@@ -79,8 +79,8 @@ const ThreadCard = ({
               <p className="text-subtle-medium text-gray-1">{formatDateString(createdAt)}</p>
 
               {comments.length > 0 && (
-                <Link href={`/thread/${id}`} className="mt-1 text-subtle-medium text-gray-1">
-                  {comments.length} {comments.length === 1 ? 'Comment' : 'Comments'}
+                <Link href={`/thread/${id}`} className="mt-1 text-subtle-medium text-blue">
+                  {comments.length} {comments.length === 1 ? 'Reply' : 'Replies'}
                 </Link>
               )}
             </div>
