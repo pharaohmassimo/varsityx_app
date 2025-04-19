@@ -55,11 +55,12 @@ const ThreadCard = ({
           </div>
           <div className="flex w-full flex-col">
                     <Link href={`/profile/${author.id}`} className="w-fit">
-                        <h4 className="cursor-pointer text-base-semi-bold text-light-1">{author.name}
-                        <span className="ml-2 text-subtle-medium text-gray-400">
-                          @{author.username}
-                        </span>
-                        </h4>
+                    <h4 className="cursor-pointer text-base-semi-bold text-light-1">
+                          <span className="hover:underline hover:decoration-white">{author.name}</span>
+                          <span className="ml-2 text-subtle-medium text-gray-400">
+                            @{author.username}
+                          </span>
+                    </h4>
                         {/* Check if username exists */}    
                     </Link>
 
