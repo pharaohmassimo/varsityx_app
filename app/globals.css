@@ -252,3 +252,15 @@
 .clerk-signup-form label {
   color: #ffffff;
 }
+
+
+/* for the scrollable bottombar */
+
+/* styles/globals.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

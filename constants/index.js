@@ -1,13 +1,23 @@
 export const sidebarLinks = [
     {
-      imgURL: "/assets/home.svg",
+      imgURL: "/assets/house.svg",
       route: "/",
       label: "Home",
     },
     {
       imgURL: "/assets/search.svg",
       route: "/search",
-      label: "Search",
+      label: "Browse",
+    },
+    {
+      imgURL: "/assets/users.svg",
+      route: "/communities",
+      label: "Communities",
+    },
+    {
+      imgURL: "/assets/pen-line.svg",
+      route: "/create-thread",
+      label: "Create Thread",
     },
     {
       imgURL: "/assets/heart.svg",
@@ -15,19 +25,34 @@ export const sidebarLinks = [
       label: "Activity",
     },
     {
-      imgURL: "/assets/create.svg",
-      route: "/create-thread",
-      label: "Create Thread",
+      imgURL: "/assets/mail-plus.svg", 
+      route: "/messages",
+      label: "Messages",
     },
     {
-      imgURL: "/assets/community.svg",
-      route: "/communities",
-      label: "Communities",
+      imgURL: "/assets/calendar-cog.svg",
+      route: "/events",
+      label: "Events",
+    },
+    {
+      imgURL: "/assets/house-plus.svg", 
+      route: "/accommodation",
+      label: "Accommodation",
+    },
+    {
+      imgURL: "/assets/award.svg", 
+      route: "/badges",
+      label: "Badges",
     },
     {
       imgURL: "/assets/user.svg",
       route: "/profile",
       label: "Profile",
+    },
+    {
+      imgURL: "/assets/settings.svg", 
+      route: "/settings",
+      label: "Settings",
     },
   ];
   

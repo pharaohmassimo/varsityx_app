@@ -21,6 +21,7 @@
     "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.7.5",
     "link-preview-js": "^3.0.14",
     "lucide-react": "^0.482.0",
     "mongoose": "^8.12.1",
