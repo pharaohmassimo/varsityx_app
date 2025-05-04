@@ -22,33 +22,32 @@ const inter = Inter({subsets: ["latin"]})
 
 
 export default function RootLayout({ 
-        children 
-    }: {    
-        children: React.ReactNode
-    }) {
-        return (
-        <ClerkProvider>
-            <html lang="en">
-              <body className={`${inter.className} bg-light-2`}> {/* Use arbitrary value */}
-                    <Topbar />
-
-
-                      <main className="flex flex-row">
-                        <LeftSidebar />
-
-                          <section className="main-container">
-                            <div className="w-full max-w-4xl">
-                                {children}
-                            </div>
-                          </section>
-
-                        <RightSidebar />
-                      </main>
-                    
-
-                    <Bottombar />
-                </body>
-            </html>
-        </ClerkProvider>
-        )
+  children 
+}: {    
+  children: React.ReactNode
+}) {
+  return (
+    <ClerkProvider>
+      <html lang="en">
+        <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>VarsityX</title>
+          <meta name="description" content="A Next.js 13 Meta Threads application" />
+        </head>
+        <body className={`${inter.className} bg-light-2`}>
+          <Topbar />
+          <main className="flex flex-row">
+            <LeftSidebar />
+            <section className="main-container">
+              <div className="w-full max-w-4xl">
+                {children}
+              </div>
+            </section>
+            <RightSidebar />
+          </main>
+          <Bottombar />
+        </body>
+      </html>
+    </ClerkProvider>
+  )
 }
